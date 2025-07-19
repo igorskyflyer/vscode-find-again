@@ -1,14 +1,13 @@
 {
-    "name": "igordvlpr-{{pkg}}",
+    "name": "igordvlpr-find-again",
     "publisher": "igordvlpr",
-    "displayName": "{{project}}",
-    "version": "{{version}}",
-    "description": "{{desc}}",
+    "displayName": "Find Again!",
+    "version": "1.0.0",
+    "description": "🔎 Find Again is a Visual Studio Code extension that lets you preserve and revisit your workspace's search queries. Whether you're tracking bugs, reviewing code, or running recurring tasks, you'll never lose a critical search again. ⏳",
     "engines": {
         "vscode": "^1.101.0"
     },
     "categories": [
-        "{{cat}}",
         "Other"
     ],
     "activationEvents": [],
@@ -31,18 +30,18 @@
     },
     "badges": [
         {
-            "url": "https://img.shields.io/visual-studio-marketplace/v/igordvlpr.igordvlpr-{{pkg}}?style=flat-square",
-            "href": "https://marketplace.visualstudio.com/items?itemName=igordvlpr.igordvlpr-{{pkg}}",
+            "url": "https://img.shields.io/visual-studio-marketplace/v/igordvlpr.igordvlpr-find-again?style=flat-square",
+            "href": "https://marketplace.visualstudio.com/items?itemName=igordvlpr.igordvlpr-find-again",
             "description": "The latest version of this extension"
         },
         {
-            "url": "https://img.shields.io/visual-studio-marketplace/i/igordvlpr.igordvlpr-{{pkg}}?style=flat-square&color=%230AB242",
-            "href": "https://marketplace.visualstudio.com/items?itemName=igordvlpr.igordvlpr-{{pkg}}",
+            "url": "https://img.shields.io/visual-studio-marketplace/i/igordvlpr.igordvlpr-find-again?style=flat-square&color=%230AB242",
+            "href": "https://marketplace.visualstudio.com/items?itemName=igordvlpr.igordvlpr-find-again",
             "description": "Number of installs for this extension"
         },
         {
-            "url": "https://img.shields.io/visual-studio-marketplace/stars/igordvlpr.igordvlpr-{{pkg}}?style=flat-square&color=%236D0AB2",
-            "href": "https://marketplace.visualstudio.com/items?itemName=igordvlpr.igordvlpr-{{pkg}}",
+            "url": "https://img.shields.io/visual-studio-marketplace/stars/igordvlpr.igordvlpr-find-again?style=flat-square&color=%236D0AB2",
+            "href": "https://marketplace.visualstudio.com/items?itemName=igordvlpr.igordvlpr-find-again",
             "description": "Number of stars for this extension"
         }
     ],
@@ -55,7 +54,7 @@
         ]
     },
     "scripts": {
-        "base": "esbuild src/extension.mts --bundle --outfile=dist/extension.js --format=cjs --platform=node --external:vscode --target=node20",
+        "base": "esbuild src/extension.mts --bundle --outfile=dist/extension.js --format=cjs --platform=node --external:vscode --target=node22",
         "dev": "npm run -S base -- --sourcemap",
         "make": "npm run -S base -- --minify",
         "vscode:prepublish": "npm run make",
@@ -63,7 +62,12 @@
         "pub": "vsce publish"
     },
     "keywords": [
-        "{{tags}}",
+        "search",
+        "find",
+        "find-again",
+        "session",
+        "project",
+        "workspace",
         "vscode",
         "extension",
         "igorskyflyer",
@@ -76,13 +80,13 @@
         "url": "https://ko-fi.com/igorskyflyer"
     },
     "pricing": "Free",
-    "homepage": "https://github.com/igorskyflyer/{{repo}}",
+    "homepage": "https://github.com/igorskyflyer/vscode-find-again",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/igorskyflyer/{{repo}}.git"
+        "url": "git+https://github.com/igorskyflyer/vscode-find-again.git"
     },
     "bugs": {
-        "url": "https://github.com/igorskyflyer/{{repo}}/issues"
+        "url": "https://github.com/igorskyflyer/vscode-find-again/issues"
     },
     "devDependencies": {
         "@types/vscode": "^1.92.0",
