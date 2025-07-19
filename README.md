@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/igorskyflyer/vscode-find-again/main/assets/extension.png" alt="Icon of Find Again!, a Visual Studio Code extension">
+  <img src="https://raw.githubusercontent.com/igorskyflyer/vscode-find-again/main/assets/extension.png" alt="Icon of Find Again!, a Visual Studio Code extension" width="256" height="256">
 </div>
 
 <h1 align="center">Find Again!</h1>
