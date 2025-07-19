@@ -77,25 +77,33 @@ Licensed under the MIT license which is available here, [MIT license](https://gi
 
 ## 🧬 Related
 
-[]()
+[@igor.dvlpr/aria](https://www.npmjs.com/package/@igor.dvlpr/aria)
 
-> __
+> _🧬 Meet Aria, an efficient Adblock filter list compiler, with many features that make your maintenance of Adblock filter lists a breeze! 🦖_
 
-[]()
+<br>
 
-> __
+[@igor.dvlpr/keppo](https://www.npmjs.com/package/@igor.dvlpr/keppo)
 
-[]()
+> _🎡 Parse, manage, compare and output SemVer-compatible version numbers. 🛡_
 
-> __
+<br>
 
-[]()
+[@igor.dvlpr/vscode-folderpicker](https://www.npmjs.com/package/@igor.dvlpr/vscode-folderpicker)
 
-> __
+> _✨ Provides a custom Folder Picker API + UI for Visual Studio Code. 🎨_
 
-[]()
+<br>
 
-> __
+[@igor.dvlpr/node-clone-js](https://www.npmjs.com/package/@igor.dvlpr/node-clone-js)
+
+> _🧬 A lightweight JavaScript utility allowing deep copy-by-value of nested objects, arrays and arrays of objects. 🪁_
+
+<br>
+
+[@igor.dvlpr/zing](https://www.npmjs.com/package/@igor.dvlpr/zing)
+
+> _🐌 Zing is a C# style String formatter for JavaScript that empowers Strings with positional arguments - composite formatting. 🚀_
 
 ---
 
