@@ -3,14 +3,17 @@
     "publisher": "igordvlpr",
     "displayName": "Find Again!",
     "version": "1.0.0",
-    "description": "🔎 Find Again is a Visual Studio Code extension that lets you save and reuse your workspace's search queries. Whether you're tracking bugs, reviewing code, or running recurring tasks, you'll never lose a critical search again. ⏳",
+    "description": "🔎 Find Again! is a Visual Studio Code extension that lets you save and reuse your workspace's search queries. Whether you're tracking bugs, reviewing code, or running recurring tasks, you'll never lose a critical search again. You can share search configs between projects or with other devs! ⏳",
     "engines": {
         "vscode": "^1.101.0"
     },
     "categories": [
+        "Snippets",
         "Other"
     ],
-    "activationEvents": [],
+    "activationEvents": [
+        "workspaceContains:.vscode/search.faq"
+    ],
     "main": "dist/extension.js",
     "extensionKind": [
         "ui"
@@ -46,10 +49,32 @@
         }
     ],
     "contributes": {
+        "configurationDefaults": {
+            "[faq]": {
+                "files.eol": "\n"
+            }
+        },
         "commands": [
             {
-                "command": "extension.sayHello",
-                "title": "Say Hello!"
+                "category": "Find Again!",
+                "command": "extension.runSearchAll",
+                "title": "Run a Search..."
+            }
+        ],
+        "languages": [
+            {
+                "id": "json",
+                "extensions": [
+                    ".faq"
+                ]
+            }
+        ],
+        "jsonValidation": [
+            {
+                "fileMatch": [
+                    "*.faq"
+                ],
+                "url": "./schemas/faq.schema.json"
             }
         ]
     },
@@ -88,12 +113,15 @@
     "bugs": {
         "url": "https://github.com/igorskyflyer/vscode-find-again/issues"
     },
+    "dependencies": {
+        "@igor.dvlpr/zep": "^6.0.0"
+    },
     "devDependencies": {
-        "@types/vscode": "1.101.0",
         "@biomejs/biome": "^2.1.2",
         "@igor.dvlpr/biome-config-igorskyflyer": "^2.0.1",
         "@types/node": "22.15.1",
-        "typescript": "^5.8.3",
-        "esbuild": "^0.25.7"
+        "@types/vscode": "1.101.0",
+        "esbuild": "^0.25.7",
+        "typescript": "^5.8.3"
     }
 }
