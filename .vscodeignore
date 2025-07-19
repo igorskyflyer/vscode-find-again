@@ -1,0 +1,15 @@
+.github/
+.vscode/
+node_modules/
+src/
+assets/*.afdesign
+assets/demo.png
+dist/*.map
+*.vsix
+*.todo
+.gitattributes
+.gitignore
+.vscodeignore
+biome.json
+package-lock.json
+tsconfig.json
