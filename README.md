@@ -7,7 +7,7 @@
 <br>
 
 <div align="center">
-  🔎 Find Again is a Visual Studio Code extension that lets you save and reuse your workspace's search queries. Whether you're tracking bugs, reviewing code, or running recurring tasks, you'll never lose a critical search again. ⏳
+  🔎 Find Again! is a Visual Studio Code extension that lets you save and reuse your workspace's search queries. Whether you're tracking bugs, reviewing code, or running recurring tasks, you'll never lose a critical search again. You can share search configs between projects or with other devs! ⏳
 </div>
 
 <br>
