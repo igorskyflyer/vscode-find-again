@@ -3,7 +3,7 @@
     "publisher": "igordvlpr",
     "displayName": "Find Again!",
     "version": "1.0.0",
-    "description": "🔎 Find Again is a Visual Studio Code extension that lets you preserve and revisit your workspace's search queries. Whether you're tracking bugs, reviewing code, or running recurring tasks, you'll never lose a critical search again. ⏳",
+    "description": "🔎 Find Again is a Visual Studio Code extension that lets you save and reuse your workspace's search queries. Whether you're tracking bugs, reviewing code, or running recurring tasks, you'll never lose a critical search again. ⏳",
     "engines": {
         "vscode": "^1.101.0"
     },
@@ -89,7 +89,7 @@
         "url": "https://github.com/igorskyflyer/vscode-find-again/issues"
     },
     "devDependencies": {
-        "@types/vscode": "^1.92.0",
+        "@types/vscode": "1.101.0",
         "@biomejs/biome": "^2.1.2",
         "@igor.dvlpr/biome-config-igorskyflyer": "^2.0.1",
         "@types/node": "22.15.1",
