@@ -1,13 +1,13 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/igorskyflyer/{{repo}}/main/assets/extension.png" alt="Icon of {{project}}, a Visual Studio Code extension">
+  <img src="https://raw.githubusercontent.com/igorskyflyer/vscode-find-again/main/assets/extension.png" alt="Icon of Find Again!, a Visual Studio Code extension">
 </div>
 
-<h1 align="center">{{project}}</h1>
+<h1 align="center">Find Again!</h1>
 
 <br>
 
 <div align="center">
-  {{desc}}
+  🔎 Find Again is a Visual Studio Code extension that lets you preserve and revisit your workspace's search queries. Whether you're tracking bugs, reviewing code, or running recurring tasks, you'll never lose a critical search again. ⏳
 </div>
 
 <br>
@@ -65,13 +65,13 @@
 
 ## 📝 Changelog
 
-📑 The changelog is available here: [CHANGELOG.md](https://github.com/igorskyflyer/{{repo}}/blob/main/CHANGELOG.md).
+📑 The changelog is available here: [CHANGELOG.md](https://github.com/igorskyflyer/vscode-find-again/blob/main/CHANGELOG.md).
 
 ---
 
 ## 🪪 License
 
-Licensed under the MIT license which is available here, [MIT license](https://github.com/igorskyflyer/{{repo}}/blob/main/LICENSE.txt).
+Licensed under the MIT license which is available here, [MIT license](https://github.com/igorskyflyer/vscode-find-again/blob/main/LICENSE.txt).
 
 ---
 
