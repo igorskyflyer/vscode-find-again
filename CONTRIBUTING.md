@@ -1,6 +1,6 @@
 # 🫱🏼‍🫲🏼 Contributing to Find Again!
 
-Thank you for considering a contribution to Find Again!! Whether you're fixing bugs, suggesting improvements, writing docs, or sharing ideas — your input helps the project grow and evolve.
+Thank you for considering a contribution to Find Again!! Whether you're fixing bugs, suggesting improvements, writing docs, or sharing ideas – your input helps the project grow and evolve.
 
 ---
 
@@ -58,7 +58,7 @@ Check out [`SUPPORT.md`](https://github.com/igorskyflyer/vscode-find-again/blob/
 <br>
 
 <div align="center">
-  Made with care, curiosity, and creativity
+  <em>Made with care, curiosity, and creativity.</em>
   <br>
   <em><strong>Igor Dimitrijević</strong> (igorskyflyer)</em>
 </div>
