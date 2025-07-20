@@ -119,7 +119,7 @@ export async function activate(context: vscode.ExtensionContext) {
 
   watcher.onDidCreate(() => {
     spinStatus(statusBar)
-    finder.initialize()
+    zep.run()
   })
 
   watcher.onDidChange(() => {
