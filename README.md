@@ -40,7 +40,7 @@
 <br>
 <br>
 
-## 📃 Table of contents
+## 📃 Table of Contents
 
 - [Features](#features)
 - [Usage](#usage)
