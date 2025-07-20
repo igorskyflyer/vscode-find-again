@@ -130,7 +130,7 @@ export class Finder {
         ignoreFocusOut: false,
         matchOnDescription: true,
         matchOnDetail: true,
-        title: 'Pick a search to perform'
+        title: 'Pick a Search to Perform'
       })
 
     if (typeof selected === 'object' && typeof selected.id === 'number') {
