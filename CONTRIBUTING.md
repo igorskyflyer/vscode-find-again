@@ -60,5 +60,5 @@ Check out [`SUPPORT.md`](https://github.com/igorskyflyer/vscode-find-again/blob/
 <div align="center">
   <em>Made with care, curiosity, and creativity.</em>
   <br>
-  <em><strong>Igor Dimitrijević</strong> (igorskyflyer)</em>
+  <a href="https://github.com/igorskyflyer"><em><strong>Igor Dimitrijević</strong> (igorskyflyer)</em></a>
 </div>
