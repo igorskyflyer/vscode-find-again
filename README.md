@@ -53,9 +53,35 @@
 
 ## 🤖 Features
 
-- 
-- 
-- 
+#### 🔍 Search Preset System
+Users define custom searches inside a `search.faq` file – each with include/exclude globs, queries, and description metadata.  
+
+#### ⚡ Instant Access
+Seamless Command Palette and shortcut integration with cached pick items for blazing-fast access.  
+
+#### 🧠 Smart Caching Mechanism
+The `search.faq`-based index is read once and cached at all times, minimizing runtime computation and reload lag.  
+
+#### 💾 File Watcher Support
+Automatically detects create/change/delete events for `search.faq` and re-indexes the search set.  
+
+#### 🛠️ Debounced Index Reload with Zep
+Uses [`Zep`](https://www.npmjs.com/package/@igor.dvlpr/zep) for throttled, graceful search refresh — prevents excessive filesystem calls.  
+
+#### 🟡 StatusBar Feedback
+Displays real-time indexing status, search availability, and errors/warnings using iconography and tooltips.  
+
+#### 📄 Fallback Support with Creation Prompt
+If the `search.faq` is missing, prompts the user to auto-generate a starter config with sample data.
+
+#### 🚫 Graceful Error Handling
+Detects malformed `search.faq` file and offers to open it for inspection without crashing or blocking the flow.  
+
+#### ✍🏻 Editable JSON File Format
+Search definitions are human-readable, easy to version-control, and ideal for collaborative logic crafting.  
+
+#### 🫱🏼‍🫲🏼 Perfect for Sharing
+The `search.faq` search-index file is perfectly sharable between projects, even between developers!
 
 <br>
 
