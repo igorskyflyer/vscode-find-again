@@ -96,7 +96,26 @@ The `search.faq` search-index file is perfectly sharable between projects, even 
 
 ## 🕵🏼 Usage
 
-After installing the extension,
+After installing the extension
+
+<div align="center">
+  <img src="./assets/promo/find-again-demo-regular-search.png" alt="">
+  <em>Figure 1.</em>
+</div>
+
+<br>
+
+<div align="center">
+  <img src="./assets/promo/find-again-demo-regex-search.png" alt="">
+  <em>Figure 2.</em>
+</div>
+
+<br>
+
+<div align="center">
+  <img src="./assets/promo/find-again-demo-command-palette.png" alt="">
+  <em>Figure 3.</em>
+</div>
 
 ---
 
