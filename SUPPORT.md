@@ -1,4 +1,4 @@
-## 🛠️ Support
+# 🛠️ Support
 
 Hello, thank you for using Find Again! 🙋🏻‍♂️  
 
