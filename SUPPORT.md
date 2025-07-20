@@ -19,12 +19,12 @@ For usage instructions, setup tips, and general inquiries see below:
 ## 🐛 Bug Reports
 
 All of my projects are heavily tested but bugs can sneak through. If you do find one, please follow the steps:
-- Open a [`new issue`](https://github.com/igorskyflyer/vscode-find-again/issues) using the appropriate issue template and with the label of `bug`,
-- Include details such as:
+- open a [`new issue`](https://github.com/igorskyflyer/vscode-find-again/issues) using the appropriate issue template and with the label of `bug`,
+- include details such as:
    - steps to reproduce
    - Find Again! version
    - device and OS details,
-- Screenshots, error message are super helpful and appreciated!
+- screenshots, error message are super helpful and appreciated!
 
 ---
 
@@ -33,8 +33,8 @@ All of my projects are heavily tested but bugs can sneak through. If you do find
 If you have an idea for a new feature or an enhancement for an existing feature, you're more than welcome to suggest it!  
 
 Do so by:
-- Opening a [`new issue`](https://github.com/igorskyflyer/vscode-find-again/issues) using the appropriate issue template and with the label of `feature`,
-- Explain your use case, the reasoning behind it and how it enhances the extension,
+- opening a [`new issue`](https://github.com/igorskyflyer/vscode-find-again/issues) using the appropriate issue template and with the label of `feature`,
+- explain your use case, the reasoning behind it and how it enhances the extension,
 - **Bonus**: include examples, mockups, etc.
 
 ---
@@ -66,9 +66,9 @@ Need to reach me directly or share your feedback?
 <br>
 
 If you'd like to support further development of Find Again!:
-- Buy me a coffee at [Ko-Fi](https://ko-fi.com/igorskyflyer) ☕
-- Star the repository ⭐
-- Share the project with your colleagues, team or network 🌍
+- buy me a coffee at [Ko-Fi](https://ko-fi.com/igorskyflyer) ☕
+- star the repository ⭐
+- share the project with your colleagues, team or network 🌍
 
 ---
 
