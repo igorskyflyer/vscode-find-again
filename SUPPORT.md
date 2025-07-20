@@ -1,6 +1,6 @@
 ## 🛠️ Support
 
-Hello, thank you for using this project! 🙋🏻‍♂️  
+Hello, thank you for using Find Again! 🙋🏻‍♂️  
 
 Whether you're exploring its features, troubleshooting, or suggesting improvements, let's make your experience as smooth as possible.
 
@@ -22,7 +22,7 @@ All of my projects are heavily tested but bugs can sneak through. If you do find
 - Open a [`new issue`](https://github.com/igorskyflyer/vscode-find-again/issues) using the appropriate issue template and with the label of `bug`,
 - Include details such as:
    - steps to reproduce
-   - project version
+   - Find Again! version
    - device and OS details,
 - Screenshots, error message are super helpful and appreciated!
 
@@ -65,7 +65,7 @@ Need to reach me directly or share your feedback?
 
 <br>
 
-If you'd like to support further development of this project:
+If you'd like to support further development of Find Again!:
 - Buy me a coffee at [Ko-Fi](https://ko-fi.com/igorskyflyer) ☕
 - Star the repository ⭐
 - Share the project with your colleagues, team or network 🌍
@@ -76,7 +76,7 @@ If you'd like to support further development of this project:
 <br>
 
 <div align="center">
-  Thank you for using this project!
+  Thank you for using Find Again!
   <br>
   <em><strong>Igor Dimitrijević</strong> (igorskyflyer)</em>
 </div>
