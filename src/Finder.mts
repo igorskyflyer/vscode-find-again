@@ -1,6 +1,6 @@
 // Author: Igor Dimitrijević (@igorskyflyer)
 
-import { readFileSync } from 'node:fs'
+import { readFileSync, statSync } from 'node:fs'
 import { join } from 'node:path'
 import * as vscode from 'vscode'
 import type { IFaqFile } from './interfaces/IFaqFile.mjs'
@@ -34,6 +34,15 @@ export class Finder {
 
   isValid(): boolean {
     return this.#valid
+  }
+
+  faqExists(): boolean {
+    try {
+      statSync(this.getFaqPath())
+      return true
+    } catch {}
+
+    return false
   }
 
   getFaqPath(): string {
