@@ -78,5 +78,5 @@ If you'd like to support further development of Find Again!:
 <div align="center">
   Thank you for using Find Again!
   <br>
-  <a href="https://github.com/igorskyflyer"><em><strong>Igor Dimitrijević</strong> (igorskyflyer)</em></a>
+  <strong>Igor Dimitrijević</strong> (<a href="https://github.com/igorskyflyer"><em>@igorskyflyer</em></a>)
 </div>
