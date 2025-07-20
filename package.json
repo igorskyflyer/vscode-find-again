@@ -54,6 +54,12 @@
                 "files.eol": "\n"
             }
         },
+        "keybindings": [
+            {
+                "command": "extension.runSearchAll",
+                "key": "CTRL+ALT+F"
+            }
+        ],
         "commands": [
             {
                 "category": "Find Again!",
