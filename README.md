@@ -54,7 +54,7 @@
 ## 🤖 Features
 
 #### 🔍 Search Preset System
-Users define custom searches inside a `search.faq` file – each with include/exclude globs, queries, and description metadata.  
+Users define custom searches inside a `search.faq` file, a centralized search index where each search entry supports include/exclude globs, queries, and description metadata.  
 
 
 #### ⚡ Instant Access
@@ -95,6 +95,8 @@ The `search.faq` search-index file is perfectly sharable between projects, even 
 <br>
 
 ## 🕵🏼 Usage
+
+After installing the extension,
 
 ---
 
