@@ -16,7 +16,8 @@ function getActiveWorkspaceFolder(): string {
     }
   }
 
-  return ''
+  const fallbackFolder = vscode.workspace.workspaceFolders?.[0]
+  return fallbackFolder ? fallbackFolder.uri.fsPath : ''
 }
 
 function createStatusbar(): vscode.StatusBarItem {
@@ -25,11 +26,25 @@ function createStatusbar(): vscode.StatusBarItem {
     1000
   )
 
-  statusBar.tooltip = 'Open the Search'
-  statusBar.command = 'extension.openSearch'
-  statusBar.text = '$(search-editor-label-icon) Ready'
+  statusBar.show()
 
   return statusBar
+}
+
+function notifyCount(statusbar: vscode.StatusBarItem, count: number) {
+  if (count > 0) {
+    statusbar.backgroundColor = undefined
+    statusbar.tooltip = 'Open the Search'
+    statusbar.command = 'extension.openSearch'
+    statusbar.text = `$(search-editor-label-icon) Ready • ${count}`
+  } else {
+    statusbar.backgroundColor = new vscode.ThemeColor(
+      'statusBarItem.errorBackground'
+    )
+    statusbar.tooltip = 'There was an error parsing the search.faq file.'
+    statusbar.command = undefined
+    statusbar.text = `$(error) Error`
+  }
 }
 
 export async function activate(context: vscode.ExtensionContext) {
@@ -47,22 +62,17 @@ export async function activate(context: vscode.ExtensionContext) {
     finder.initialize()
   }, 500)
 
-  zep.onBeforeRun(() => {
-    statusBar.text = `$(sync~spin) Reloading`
-  })
-
   zep.onAfterRun(() => {
-    statusBar.text = `$(search-editor-label-icon) Ready`
+    notifyCount(statusBar, finder.getCount())
   })
 
   const watcher = vscode.workspace.createFileSystemWatcher(finder.getFaqPath())
 
   watcher.onDidChange(() => {
+    statusBar.backgroundColor = undefined
+    statusBar.text = `$(sync~spin) Reloading...`
     zep.run()
   })
-
-  context.subscriptions.push(statusBar)
-  context.subscriptions.push(watcher)
 
   context.subscriptions.push(
     vscode.commands.registerCommand('extension.runSearchAll', async () => {
@@ -71,19 +81,22 @@ export async function activate(context: vscode.ExtensionContext) {
         return
       }
 
-      vscode.window.showErrorMessage('No searches file was found.')
+      vscode.window.showErrorMessage('No "./vscode/search.faq" file was found.')
     })
   )
 
+  // used internally for the StatusBar command
   context.subscriptions.push(
     vscode.commands.registerCommand('extension.openSearch', () => {
       vscode.commands.executeCommand('workbench.action.findInFiles')
     })
   )
 
-  statusBar.show()
+  context.subscriptions.push(statusBar)
+  context.subscriptions.push(watcher)
 
   await finder.initialize()
+  notifyCount(statusBar, finder.getCount())
 }
 
 export function deactivate() {}
