@@ -61,7 +61,7 @@ Need to reach me directly or share your feedback?
 
 ## 💖 Support the Project
 
-> This project is maintained by a solo developer passionate about productivity tools and open source.
+> This project was created by a solo developer passionate about productivity tools and open source.
 
 <br>
 
