@@ -65,7 +65,7 @@ Search definitions are human-readable, easy to version-control, and ideal for co
 #### 🫱🏼‍🫲🏼 Perfect for Sharing
 The `search.faq` search-index file is perfectly sharable between projects, even between developers!
 
-<br>
+---
 
 ## 🕵🏼 Usage
 
