@@ -14,13 +14,13 @@
 
 ## 📃 Table of Contents
 
-- [Features](#features)
-- [Usage](#usage)
-- [Changelog](#changelog)
-- [License](#license)
-- [Support](#support)
-- [Related](#related)
-- [Author](#author)
+- [Features](#-features)
+- [Usage](#-usage)
+- [Changelog](#-changelog)
+- [License](#-license)
+- [Support](#-support)
+- [Related](#-related)
+- [Author](#-author)
 
 ---
 
@@ -77,7 +77,7 @@ After installing the extension, open a folder and launch `Find Again!` via:
 
 <br>
 
-The extension expects a searches index – `search.faq` located in the current workspace's configuration folder `.vscode`. The searches index is a JSON file with custom properties. If one doesn't exist, an option to create one is presented. See [Examples](#️example) below for more information.
+The extension expects a searches index – `search.faq` located in the current workspace's configuration folder `.vscode`. The searches index is a JSON file with custom properties. If one doesn't exist, an option to create one is presented. See [Examples](#️-example) below for more information.
 
 <br>
 <br>
