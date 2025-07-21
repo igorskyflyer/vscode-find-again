@@ -143,7 +143,7 @@ Licensed under the MIT license which is available here, [MIT license](https://gi
 
 ## 💖 Support
 
-I work hard for every project, including this one and your support means a lot to me!
+I work hard for every project, including this one and your support means a lot to me!  
 Consider buying me a coffee. ☕
 <br>
 <div align="center">
