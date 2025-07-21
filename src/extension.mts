@@ -1,11 +1,18 @@
 // Author: Igor Dimitrijević (@igorskyflyer)
 
 import { Zep } from '@igor.dvlpr/zep'
-import { writeFileSync } from 'node:fs'
+import { existsSync, mkdirSync, writeFileSync } from 'node:fs'
 import * as vscode from 'vscode'
 import { Finder } from './Finder.mjs'
 
 function getActiveWorkspaceFolder(): string {
+  if (
+    !Array.isArray(vscode.workspace.workspaceFolders) ||
+    vscode.workspace.workspaceFolders.length === 0
+  ) {
+    return ''
+  }
+
   const activeEditor = vscode.window.activeTextEditor
 
   if (activeEditor) {
@@ -17,7 +24,7 @@ function getActiveWorkspaceFolder(): string {
     }
   }
 
-  const fallbackFolder = vscode.workspace.workspaceFolders?.[0]
+  const fallbackFolder = vscode.workspace.workspaceFolders[0]
   return fallbackFolder ? fallbackFolder.uri.fsPath : ''
 }
 
@@ -32,12 +39,12 @@ function createStatus(): vscode.StatusBarItem {
   return statusBar
 }
 
-function spinStatus(statusbar: vscode.StatusBarItem) {
+function spinStatus(statusbar: vscode.StatusBarItem): void {
   statusbar.text = `$(sync~spin) Reloading...`
   statusbar.tooltip = 'Reloading the search index...'
 }
 
-function postStatus(finder: Finder, statusbar: vscode.StatusBarItem) {
+function postStatus(finder: Finder, statusbar: vscode.StatusBarItem): void {
   if (finder.isValid()) {
     statusbar.tooltip = 'Open the Search'
     statusbar.command = 'extension.openSearch'
@@ -49,21 +56,37 @@ function postStatus(finder: Finder, statusbar: vscode.StatusBarItem) {
   statusbar.text = `$(search-editor-label-icon) N/A`
 
   if (!finder.faqExists()) {
-    statusbar.tooltip = "The search.faq file doesn't exist."
+    statusbar.tooltip = 'The search.faq file does not exist.'
     return
   }
 
   statusbar.tooltip = 'There was an error parsing the search.faq file.'
 }
 
-async function openFaqEditor(filePath: string) {
+async function openFaqEditor(filePath: string): Promise<void> {
   const uri = vscode.Uri.file(filePath)
   const doc: vscode.TextDocument = await vscode.workspace.openTextDocument(uri)
 
   vscode.window.showTextDocument(doc)
 }
 
-async function handleNoFaq(filePath: string) {
+function createWorkspaceConfigDir(workspaceConfigDir: string): boolean {
+  try {
+    if (!existsSync(workspaceConfigDir)) {
+      mkdirSync(workspaceConfigDir)
+      return true
+    }
+  } catch {
+    return false
+  }
+
+  return true
+}
+
+async function handleNoFaq(
+  workspaceConfigDir: string,
+  faqFile: string
+): Promise<void> {
   const choiceNoFile: string | undefined =
     await vscode.window.showWarningMessage(
       'No "./vscode/search.faq" file was found. Create a search.faq file in the current workspace?',
@@ -71,6 +94,13 @@ async function handleNoFaq(filePath: string) {
     )
 
   if (choiceNoFile === 'Create') {
+    if (!createWorkspaceConfigDir(workspaceConfigDir)) {
+      vscode.window.showErrorMessage(
+        'Could not crate the .vscode folder. Try again or create it manually.'
+      )
+      return
+    }
+
     try {
       const content: string = JSON.stringify(
         {
@@ -83,11 +113,11 @@ async function handleNoFaq(filePath: string) {
           }
         },
         null,
-        2
+        4
       )
 
-      writeFileSync(filePath, content, { encoding: 'utf-8' })
-      await openFaqEditor(filePath)
+      writeFileSync(faqFile, content, { encoding: 'utf-8' })
+      await openFaqEditor(faqFile)
     } catch {
       vscode.window.showErrorMessage(
         'An error occurred while creating the file, try again or create the file manually.'
@@ -96,15 +126,18 @@ async function handleNoFaq(filePath: string) {
   }
 }
 
-export async function activate(context: vscode.ExtensionContext) {
-  if (
-    !Array.isArray(vscode.workspace.workspaceFolders) ||
-    vscode.workspace.workspaceFolders.length === 0
-  ) {
+export async function activate(
+  context: vscode.ExtensionContext
+): Promise<void> {
+  const workspaceFolder: string = getActiveWorkspaceFolder()
+
+  if (workspaceFolder === '') {
+    vscode.window.showInformationMessage(
+      'No active workspace, open a folder to start using "Find Again!".'
+    )
     return
   }
 
-  const workspaceFolder: string = getActiveWorkspaceFolder()
   const finder: Finder = new Finder(workspaceFolder)
   const statusBar: vscode.StatusBarItem = createStatus()
   const zep: Zep = new Zep(() => {
@@ -135,7 +168,7 @@ export async function activate(context: vscode.ExtensionContext) {
   context.subscriptions.push(
     vscode.commands.registerCommand('extension.runSearchAll', async () => {
       if (!finder.faqExists()) {
-        await handleNoFaq(finder.getFaqPath())
+        await handleNoFaq(finder.getWorkspaceConfigDir(), finder.getFaqPath())
         return
       }
 
@@ -170,4 +203,4 @@ export async function activate(context: vscode.ExtensionContext) {
   postStatus(finder, statusBar)
 }
 
-export function deactivate() {}
+export function deactivate(): void {}
