@@ -84,21 +84,23 @@ The extension expects a searches index – `search.faq` located in the current w
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/igorskyflyer/vscode-find-again/main/assets/promo/find-again-demo-regular-search.png" alt="">
-  <em>Figure 1.</em>
+  <em>Figure 1. Find Again! – regular search</em>
 </div>
 
+<br>
 <br>
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/igorskyflyer/vscode-find-again/main/assets/promo/find-again-demo-regex-search.png" alt="">
-  <em>Figure 2.</em>
+  <em>Figure 2. Find Again! – regex search</em>
 </div>
 
+<br>
 <br>
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/igorskyflyer/vscode-find-again/main/assets/promo/find-again-demo-command-palette.png" alt="">
-  <em>Figure 3.</em>
+  <em>Figure 3. Find Again! – Command Palette</em>
 </div>
 
 ---
