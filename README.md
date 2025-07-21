@@ -1,40 +1,12 @@
 <div align="center">
   <img src="https://raw.githubusercontent.com/igorskyflyer/vscode-find-again/main/assets/extension.png" alt="Icon of Find Again!, a Visual Studio Code extension" width="256" height="256">
+  <h1 align="center">Find Again!</h1>
 </div>
-
-<h1 align="center">Find Again!</h1>
 
 <br>
 
 <div align="center">
   🔎 Find Again! is a Visual Studio Code extension that lets you save and reuse your workspace's search queries. Whether you're tracking bugs, reviewing code, or running recurring tasks, you'll never lose a critical search again. You can share search configs between projects or with other devs! ⏳
-</div>
-
-<br>
-<br>
-
-<div align="center">
-  <blockquote>
-    <br>
-    <h4>💖 Support further development</h4>
-    <span>I work hard for every project, including this one
-    <br>
-    and your support means a lot to me!
-    <br>
-    <br>
-    Consider buying me a coffee. ☕
-    <br>
-    <strong>Thank you for supporting my efforts! 🙏😊</strong></span>
-    <br>
-    <br>
-    <a href="https://ko-fi.com/igorskyflyer" target="_blank"><img src="https://raw.githubusercontent.com/igorskyflyer/igorskyflyer/main/assets/ko-fi.png" alt="Donate to igorskyflyer" width="150"></a>
-    <br>
-    <br>
-    <a href="https://github.com/igorskyflyer"><em>@igorskyflyer</em></a>
-    <br>
-    <br>
-    <br>
-  </blockquote>
 </div>
 
 <br>
@@ -46,6 +18,7 @@
 - [Usage](#usage)
 - [Changelog](#changelog)
 - [License](#license)
+- [Support](#support)
 - [Related](#related)
 - [Author](#author)
 
@@ -96,26 +69,63 @@ The `search.faq` search-index file is perfectly sharable between projects, even 
 
 ## 🕵🏼 Usage
 
-After installing the extension
+After installing the extension, open a folder and launch `Find Again!` via:
+- the `Command Palette`: `Find Again!: Run a Search`,
+- the keyboard shortcut:
+  - `CTRL + ALT + F` (Windows, Linux)
+  - `Command + Option + F` (macOS).
+
+<br>
+
+The extension expects a searches index – `search.faq` located in the current workspace's configuration folder `.vscode`. The searches index is a JSON file with custom properties. If one doesn't exist, an option to create one is presented. See [Examples](#️example) below for more information.
+
+<br>
+<br>
 
 <div align="center">
-  <img src="./assets/promo/find-again-demo-regular-search.png" alt="">
+  <img src="https://raw.githubusercontent.com/igorskyflyer/vscode-find-again/main/assets/promo/find-again-demo-regular-search.png" alt="">
   <em>Figure 1.</em>
 </div>
 
 <br>
 
 <div align="center">
-  <img src="./assets/promo/find-again-demo-regex-search.png" alt="">
+  <img src="https://raw.githubusercontent.com/igorskyflyer/vscode-find-again/main/assets/promo/find-again-demo-regex-search.png" alt="">
   <em>Figure 2.</em>
 </div>
 
 <br>
 
 <div align="center">
-  <img src="./assets/promo/find-again-demo-command-palette.png" alt="">
+  <img src="https://raw.githubusercontent.com/igorskyflyer/vscode-find-again/main/assets/promo/find-again-demo-command-palette.png" alt="">
   <em>Figure 3.</em>
 </div>
+
+---
+
+## 🗒️ Example
+
+Here's an example of how a `search.faq` file looks like:
+
+```json
+{
+    "searches": {
+        "My TS Search": {
+            "query": "Exists",
+            "include": "./src/*.ts",
+            "caseSensitive": true,
+            "description": "Search TypeScript source files"
+        },
+        "My Docs Search": {
+            "query": "#{1,6}",
+            "include": "./*.md",
+            "caseSensitive": false,
+            "regex": true,
+            "description": "Find all Headers in Docs"
+        }
+    }
+}
+```
 
 ---
 
@@ -128,6 +138,20 @@ After installing the extension
 ## 🪪 License
 
 Licensed under the MIT license which is available here, [MIT license](https://github.com/igorskyflyer/vscode-find-again/blob/main/LICENSE.txt).
+
+---
+
+## 💖 Support
+
+I work hard for every project, including this one and your support means a lot to me!
+Consider buying me a coffee. ☕
+<br>
+<div align="center">
+  <a href="https://ko-fi.com/igorskyflyer" target="_blank"><img src="https://raw.githubusercontent.com/igorskyflyer/igorskyflyer/main/assets/ko-fi.png" alt="Donate to igorskyflyer" width="120" height="30"></a>
+  <br>
+  <br>
+  <em>Thank you for supporting my efforts!</em> 🙏😊
+</div>
 
 ---
 
