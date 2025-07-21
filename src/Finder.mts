@@ -45,8 +45,16 @@ export class Finder {
     return false
   }
 
+  getRootPath(): string {
+    return this.#root
+  }
+
+  getWorkspaceConfigDir(): string {
+    return join(this.#root, '.vscode')
+  }
+
   getFaqPath(): string {
-    return join(this.#root, '.vscode', 'search.faq')
+    return join(this.getWorkspaceConfigDir(), 'search.faq')
   }
 
   getCount(): number {
