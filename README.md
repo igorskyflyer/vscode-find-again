@@ -143,10 +143,12 @@ Licensed under the MIT license which is available here, [MIT license](https://gi
 
 ## 💖 Support
 
-I work hard for every project, including this one and your support means a lot to me!  
-Consider buying me a coffee. ☕
-<br>
 <div align="center">
+  I work hard for every project, including this one and your support means a lot to me!
+  <br>
+  Consider buying me a coffee. ☕
+  <br>
+  <br>
   <a href="https://ko-fi.com/igorskyflyer" target="_blank"><img src="https://raw.githubusercontent.com/igorskyflyer/igorskyflyer/main/assets/ko-fi.png" alt="Donate to igorskyflyer" width="120" height="30"></a>
   <br>
   <br>
