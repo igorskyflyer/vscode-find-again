@@ -151,7 +151,7 @@ Licensed under the MIT license which is available here, [MIT license](https://gi
   Consider buying me a coffee. ☕
   <br>
   <br>
-  <a href="https://ko-fi.com/igorskyflyer" target="_blank"><img src="https://raw.githubusercontent.com/igorskyflyer/igorskyflyer/main/assets/ko-fi.png" alt="Donate to igorskyflyer" width="120" height="30"></a>
+  <a href="https://ko-fi.com/igorskyflyer" target="_blank"><img src="https://raw.githubusercontent.com/igorskyflyer/igorskyflyer/main/assets/ko-fi.png" alt="Donate to igorskyflyer" width="180" height="46"></a>
   <br>
   <br>
   <em>Thank you for supporting my efforts!</em> 🙏😊
