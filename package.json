@@ -57,14 +57,16 @@
         "keybindings": [
             {
                 "command": "extension.runSearchAll",
-                "key": "CTRL+ALT+F"
+                "key": "CTRL+ALT+F",
+                "when": "workspaceFolderCount > 0"
             }
         ],
         "commands": [
             {
                 "category": "Find Again!",
                 "command": "extension.runSearchAll",
-                "title": "Run a Search..."
+                "title": "Run a Search...",
+                "enablement": "workspaceFolderCount > 0"
             }
         ],
         "languages": [
