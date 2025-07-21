@@ -141,9 +141,8 @@ Licensed under the MIT license which is available here, [MIT license](https://gi
 
 ---
 
-## 💖 Support
-
 <div align="center">
+  <h2>💖 Support</h2>
   I work hard for every project, including this one and your support means a lot to me!
   <br>
   Consider buying me a coffee. ☕
