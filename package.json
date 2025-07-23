@@ -67,6 +67,12 @@
                 "command": "extension.runSearchAll",
                 "title": "Run a Search...",
                 "enablement": "workspaceFolderCount > 0"
+            },
+            {
+                "category": "Find Again!",
+                "command": "extension.createFaqFile",
+                "title": "Create the Default .faq Search Index",
+                "enablement": "workspaceFolderCount > 0"
             }
         ],
         "languages": [
