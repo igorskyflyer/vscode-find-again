@@ -16,9 +16,10 @@
 
 - [Features](#-features)
 - [Usage](#-usage)
+- [Example](#️-example)
 - [Changelog](#-changelog)
-- [License](#-license)
 - [Support](#-support)
+- [License](#-license)
 - [Related](#-related)
 - [Author](#-author)
 
@@ -137,12 +138,6 @@ Here's an example of how a `search.faq` file looks like:
 
 ---
 
-## 🪪 License
-
-Licensed under the MIT license which is available here, [MIT license](https://github.com/igorskyflyer/vscode-find-again/blob/main/LICENSE.txt).
-
----
-
 ## 💖 Support
 
 <div align="center">
@@ -156,6 +151,12 @@ Licensed under the MIT license which is available here, [MIT license](https://gi
   <br>
   <em>Thank you for supporting my efforts!</em> 🙏😊
 </div>
+
+---
+
+## 🪪 License
+
+Licensed under the MIT license which is available here, [MIT license](https://github.com/igorskyflyer/vscode-find-again/blob/main/LICENSE.txt).
 
 ---
 
