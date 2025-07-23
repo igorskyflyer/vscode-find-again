@@ -4,6 +4,20 @@
     "title": "Find Again! Query Config",
     "description": "Defines a set of named search entries used by the Find Again! extension.",
     "properties": {
+        "author": {
+            "type": "string",
+            "description": "Author name.",
+            "minLength": 6,
+            "maxLength": 72,
+            "pattern": "^[a-zA-Z0-9 .,_@-]+$"
+        },
+        "version": {
+            "type": "string",
+            "description": "Version.",
+            "minLength": 5,
+            "maxLength": 14,
+            "pattern": "^\\d+\\.\\d+\\.\\d+$"
+        },
         "searches": {
             "type": "object",
             "description": "Named search entries; each key must be unique.",
