@@ -83,6 +83,41 @@ function createWorkspaceConfigDir(workspaceConfigDir: string): boolean {
   return true
 }
 
+async function createFaqFile(
+  workspaceConfigDir: string,
+  faqFile: string
+): Promise<void> {
+  if (!createWorkspaceConfigDir(workspaceConfigDir)) {
+    vscode.window.showErrorMessage(
+      'Could not crate the .vscode folder. Try again or create it manually.'
+    )
+    return
+  }
+
+  try {
+    const content: string = JSON.stringify(
+      {
+        searches: {
+          'My JS Search': {
+            'include': '**/*.js',
+            'caseSensitive': false,
+            'description': 'Search JavaScript files'
+          }
+        }
+      },
+      null,
+      4
+    )
+
+    writeFileSync(faqFile, content, { encoding: 'utf-8' })
+    await openFaqEditor(faqFile)
+  } catch {
+    vscode.window.showErrorMessage(
+      'An error occurred while creating the file, try again or create the file manually.'
+    )
+  }
+}
+
 async function handleNoFaq(
   workspaceConfigDir: string,
   faqFile: string
@@ -93,36 +128,8 @@ async function handleNoFaq(
       'Create'
     )
 
-  if (choiceNoFile === 'Create') {
-    if (!createWorkspaceConfigDir(workspaceConfigDir)) {
-      vscode.window.showErrorMessage(
-        'Could not crate the .vscode folder. Try again or create it manually.'
-      )
-      return
-    }
-
-    try {
-      const content: string = JSON.stringify(
-        {
-          searches: {
-            'My JS Search': {
-              'include': '**/*.js',
-              'caseSensitive': false,
-              'description': 'Search JavaScript files'
-            }
-          }
-        },
-        null,
-        4
-      )
-
-      writeFileSync(faqFile, content, { encoding: 'utf-8' })
-      await openFaqEditor(faqFile)
-    } catch {
-      vscode.window.showErrorMessage(
-        'An error occurred while creating the file, try again or create the file manually.'
-      )
-    }
+  if (choiceNoFile && choiceNoFile === 'Create') {
+    createFaqFile(workspaceConfigDir, faqFile)
   }
 }
 
@@ -182,10 +189,29 @@ export async function activate(
             'Open'
           )
 
-        if (choiceOpenFaq === 'Open') {
+        if (choiceOpenFaq && choiceOpenFaq === 'Open') {
           await openFaqEditor(finder.getFaqPath())
         }
       }
+    })
+  )
+
+  context.subscriptions.push(
+    vscode.commands.registerCommand('extension.createFaqFile', async () => {
+      if (finder.faqExists()) {
+        const choiceOverwrite: string | undefined =
+          await vscode.window.showInformationMessage(
+            'A search.faq already exists. Overwrite it?',
+            'Yes',
+            'No'
+          )
+
+        if (choiceOverwrite && choiceOverwrite === 'No') {
+          return
+        }
+      }
+
+      createFaqFile(finder.getWorkspaceConfigDir(), finder.getFaqPath())
     })
   )
 
